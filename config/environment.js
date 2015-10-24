@@ -4,6 +4,9 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'bookstore-app',
     environment: environment,
+    contentSecurityPolicy: {
+      'connect-src': "'self' http://localhost:8080"
+    },
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {

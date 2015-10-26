@@ -1,7 +1,18 @@
-<ul>
-  {{#each model as |color|}}
-    <li>{{color}}</li>
-  {{/each}}
-</ul>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |color|}}
+      <tr>
+        <td>
+          {{color}}
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
 
 {{#link-to 'users'}}Go to Users{{/link-to}}

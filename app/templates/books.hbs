@@ -1,5 +1,16 @@
-<ul>
-  {{#each model as |book|}}
-    <li>{{book.title}}</li>
-  {{/each}}
-</ul>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |book|}}
+      <tr>
+        <td>{{book.title}}</td>
+        <td>{{#link-to "book" book}}View{{/link-to}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

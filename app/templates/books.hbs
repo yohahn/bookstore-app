@@ -2,6 +2,7 @@
   <thead>
     <tr>
       <th>Title</th>
+      <th>Published Date</th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -9,6 +10,7 @@
     {{#each model as |book|}}
       <tr>
         <td>{{book.title}}</td>
+        <td>{{book.published}}</td>
         <td>
           {{#link-to "book" book}}View{{/link-to}}
           | {{#link-to "bookEdit" book}}Edit{{/link-to}}

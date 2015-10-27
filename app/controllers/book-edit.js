@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
       var self = this;
       var book = this.get("model");
       book.save().then(() => {
-        self.transitionToRoute('book', book);
+        self.transitionToRoute('books');
       });
     },
     cancel() {

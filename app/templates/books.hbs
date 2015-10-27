@@ -1,6 +1,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th>ID</th>
       <th>Title</th>
       <th>Published Date</th>
       <th>Actions</th>
@@ -9,6 +10,7 @@
   <tbody>
     {{#each model as |book|}}
       <tr>
+        <td>{{book.id}}</td>
         <td>{{book.title}}</td>
         <td>{{moment-format book.published "MM/DD/YYYY" allow-empty=true}}</td>
         <td>

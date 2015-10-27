@@ -2,16 +2,14 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   actions: {
-    save() {
+    new() {
       var self = this;
-      var book = this.get("model");
+      var book = this.store.createRecord('book', this.get('fields'));
       book.save().then(() => {
         self.transitionToRoute('book', book);
       });
     },
     cancel() {
-      var book = this.get("model");
-      book.rollbackAttributes();
       this.transitionToRoute('books');
     }
   }

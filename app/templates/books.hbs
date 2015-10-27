@@ -10,7 +10,7 @@
     {{#each model as |book|}}
       <tr>
         <td>{{book.title}}</td>
-        <td>{{book.published}}</td>
+        <td>{{moment-format book.published "MM/DD/YYYY" allow-empty=true}}</td>
         <td>
           {{#link-to "book" book}}View{{/link-to}}
           | {{#link-to "bookEdit" book}}Edit{{/link-to}}

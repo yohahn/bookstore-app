@@ -13,6 +13,13 @@ export default Ember.Controller.extend({
       var book = this.get("model");
       book.rollbackAttributes();
       this.transitionToRoute('books');
+    },
+    delete() {
+      var self = this;
+      var book = this.get("model");
+      book.destroyRecord().then(() => {
+        self.transitionToRoute('books');
+      })
     }
   }
 });

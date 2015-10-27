@@ -9,7 +9,10 @@
     {{#each model as |book|}}
       <tr>
         <td>{{book.title}}</td>
-        <td>{{#link-to "book" book}}View{{/link-to}}</td>
+        <td>
+          {{#link-to "book" book}}View{{/link-to}}
+          | {{#link-to "bookEdit" book}}Edit{{/link-to}}
+        </td>
       </tr>
     {{/each}}
   </tbody>

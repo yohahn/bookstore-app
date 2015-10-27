@@ -5,7 +5,8 @@ module.exports = function(environment) {
     modulePrefix: 'bookstore-app',
     environment: environment,
     contentSecurityPolicy: {
-      'connect-src': "'self' http://localhost:8080"
+      'connect-src': "'self' http://localhost:8080",
+      'img-src': "'self' data:"
     },
     baseURL: '/',
     locationType: 'auto',
